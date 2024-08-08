@@ -1,0 +1,14 @@
+Pillow
+openai
+pydantic
+llama-index
+pandas
+tqdm
+ipykernel
+python-dotenv
+deeplake
+jupyter
+llama-hub
+pyowm
+chainlit
+pyngrok
