@@ -3,3 +3,4 @@ llama-index
 pydantic
 chainlit
 asyncio
+pyngrok
