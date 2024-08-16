@@ -26,7 +26,7 @@ class RoiSlabsList(BaseModel):
     roislabsList: List[RoiSlabs]
 
 # Initialize your LLM and agent
-llm = OpenAI(model="gpt-4", temperature=0.7)
+llm = OpenAI(model=os.getenv("OPENAI_API_MODEL"), temperature=0.7)
 
 agent = OpenAIAgent.from_tools(
     system_prompt="""
