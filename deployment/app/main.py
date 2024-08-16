@@ -1,11 +1,18 @@
 import os
-import openai
-from typing import List
-from pydantic import BaseModel
+from pyngrok import ngrok
 import chainlit as cl
 import asyncio
 from llama_index.agent.openai import OpenAIAgent
 from llama_index.llms.openai import OpenAI
+from pydantic import BaseModel
+from typing import List
+
+# Set your ngrok authtoken
+ngrok.set_auth_token("NGROK_API_KEY")
+
+# Establish an ngrok tunnel on port 8000
+public_url = ngrok.connect(8000)
+print("Your app is publicly accessible at:", public_url)
 
 # Ensure you use environment variables for your API keys
 openai.api_key = os.getenv('OPENAI_API_KEY')
@@ -129,6 +136,7 @@ Got output: {"roislabsList":[{"slabs":"l1midALLSKM","rois":"ALLSKM"}]}
     verbose=True
 )
 
+# Your Chainlit app setup
 @cl.on_message
 async def main(message: cl.Message):
     prompt = message.content
@@ -136,3 +144,7 @@ async def main(message: cl.Message):
     response_text = agent_response.response
     response_message = cl.Message(content=response_text)
     await response_message.send()
+
+# Start the Chainlit application
+if __name__ == "__main__":
+    cl.run(host="0.0.0.0", port=8000)
