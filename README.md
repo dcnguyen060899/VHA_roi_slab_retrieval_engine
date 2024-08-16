@@ -1,4 +1,4 @@
-# [<u><em>VHA_roi_slab_retrieval_engine</em>](https://vha-roi-slab-retrieval-engine.onrender.com)/)
+# [<u><em>VHA_roi_slab_retrieval_engine</em>](https://vha-roi-slab-retrieval-engine.onrender.com)
 
 
 Voronoi Health Analytics specializes in AI-based medical image analysis software, focusing on their Data Analysis Facilitation Suite (DAFS). DAFS is designed for automated analysis of CT and PET/CT images, offering powerful tools for body composition, organ, and tissue measurements. The software is 100% on-premise, ensuring data privacy and security. It is widely used in research institutes for applications in oncology, cardiac health, and clinical trials.
